@@ -1,9 +1,10 @@
 * {box-sizing:border-box}
 
 .slideshow-container {
+  margin-left: 100px;
   max-width: 1000px;
   position: relative;
-  margin: auto;
+  margin-top: 10px;
 }
 
 .mySlides {
@@ -15,7 +16,7 @@
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
+  margin-top: -90px;
   padding: 16px;
   color: white;
   font-weight: bold;
