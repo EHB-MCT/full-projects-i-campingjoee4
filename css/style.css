@@ -281,7 +281,7 @@ body {
   background-color: #CAD3C8;
 }
 
-.button-{
+.button-doe-mee{
   display: inline-block;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
@@ -293,7 +293,7 @@ body {
   transition: 200ms;
 }
 
-.button_cantine:hover {
+.button-doe-mee:hover {
   background-color: #ffd000;
 }
 
