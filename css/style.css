@@ -112,10 +112,11 @@ body {
 
 .topnav a {
   margin-right: 10px;
-  color: #000000;
+  color: #ffffff;
   padding: 17px;
   text-decoration: none;
   font-size: 17px;
+  background-color: #ffd000;
 }
 
 .topnav a:hover {
