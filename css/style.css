@@ -109,12 +109,10 @@ body {
 .dropdown:hover .dropbtn {background-color: #ffd000;}
 
 .topnav {
-  /* display: flex; */
-  /* justify-content: right; */
   position: absolute;
   overflow: hidden;
   width: 100%;
-  margin-top: -5px;
+  margin-top: 20px;
   margin-left: 5px;
   margin-right: 5px;
   transform: scale(0.9);
@@ -153,19 +151,22 @@ body {
 .topnav a {
   font-family: 'Poppins', sans-serif;
   display: inline-block;
-  color: #000000;
-  padding: 16px;
+  color: #ffffff;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   margin-left: 25px;
   text-decoration: none;
-  font-size: 17px;
-  background-color: #ffd000;
-  border-radius: 0px 0px 7px 7px;
+  font-size: 21px;
+  font-weight: 500;
+  border-radius: 7px;
   transition: 200ms;
 }
 
 .topnav a:hover {
   color: white;
-  background-color: #ffe574;
+  background-color: #ffd000;
 
 }
 
@@ -249,8 +250,8 @@ body {
   border-radius: 15px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold 700px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.60);
+  color: rgb(255, 255, 255);
+
 
 }
 
@@ -258,8 +259,6 @@ body {
   margin-bottom: -15px;
   margin-top: 10px;
   color: #ffd000;
-
-
 }
 
 .home-text p {
@@ -282,9 +281,13 @@ body {
 
 .button_cantine:hover {
   background-color: #ffd000;
-
-
 }
 
 
+.scroll-down-icon{
+  position: absolute;
+  z-index: 2;
+  margin-top: 44%;
+  text-align: center;
 
+}
