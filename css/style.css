@@ -178,11 +178,6 @@ body {
   height: 1000px;
 }
 
-.sponsors{
-  background-color: #ffd000;
-  height: 900px;
-}
-
 .home-text {
   position: absolute;
   margin-left: 20%;
@@ -262,6 +257,19 @@ body {
   margin-top: -20px;
 }
 
+.navbar-links{
+  position: absolute;
+  font: 900 bold;
+  font-family: "Poppins",sans-serif;
+  margin-left: 1%;
+  color: white;
+  font-size: 15px;
+  margin-top: -12px;
+}
+
+.navbar a:hover{
+background-color: rgb(148, 148, 148);
+}
 
 .footer{
   justify-content: space-around;
@@ -269,4 +277,10 @@ body {
   display: flex;
   flex-direction: row;
   box-shadow: 2px -3px 26px 9px rgba(0,0,0,0.47);
+  font: medium;
+}
+
+.text-container-footer{
+  margin-left: 17%;
+  font-family: 'Poppins', sans-serif;
 }
