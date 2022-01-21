@@ -144,11 +144,6 @@ body {
   margin-right: 20px;
 }
 
-.footer {
-  width: 100%;
-  height: 300px;
-}
-
 .home-page{
     width: 100%;
 }
@@ -279,12 +274,15 @@ background-color: rgb(148, 148, 148);
 }
 
 .footer{
+  width: 100%;
+  height: 300px;
   justify-content: space-around;
   background-color: #006266;
   display: flex;
   flex-direction: row;
-  box-shadow: 2px -3px 26px 9px rgba(0,0,0,0.47);
   font: medium;
+  z-index: 3;
+  box-shadow: 2px -3px 26px 9px rgba(0,0,0,0.47);
 }
 
 .text-container-footer{
@@ -396,7 +394,6 @@ background-color: rgb(148, 148, 148);
   font-family: "Poppins",sans-serif;  
   color: black;
   text-align: center;
-
 }
 
 .text_profile h1 {
@@ -428,68 +425,10 @@ background-color: rgb(148, 148, 148);
 
 }
 
-.spons_column {
-  /*position: absolute;
-  margin-left: 50%;
-  margin-top: 20%;*/
-
-  display: flex;
-  justify-content: right;
-  flex-direction: column;
-
-
-
-}
-
-.spons_column2 {
-  /*position: absolute;
-  margin-left: 50%;
-  margin-top: 20%;*/
-
-  display: flex;
-  justify-content: right;
-  flex-direction: column;
-
-
-
-}
-
-.all_column {
-  display: flex;
-  flex-direction: row;
-  transform: scale(1.5);
-
-}
-
-.sponser_logo1 {
-  transform: scale(.9);
-
-
-}
-
-.sponser_logo2 {
-  transform: scale(.8);
-  margin-right: 10%;
-
-
-}
-
-.sponser_logo3 {
-  transform: scale(.9);
-
-
-}
-
-.sponser_logo4 {
-  margin-top: 25%;
-  
-}
-
-.column_absolute {
+.sponsers_img {
+  z-index: 1;
   position: absolute;
-  margin-left: 50%;
-  margin-top: 20%;
+  margin-left: 43%;
+  margin-top: 7%;
 
 }
-
-/*  */
