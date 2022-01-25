@@ -97,3 +97,17 @@
 .form input:focus + .label_name::after, .form input:valid + .label_name::after {
     transform: translateX(31%);
 }
+
+.pos_input2 {
+    width: 40%;
+    position: absolute;
+    margin-left: 170%;
+    margin-top: 0%;
+}
+
+.pos_input3 {
+    width: 40%;
+    position: absolute;
+    margin-left: 170%;
+    margin-top: 16%;
+}

@@ -2,9 +2,9 @@
 
 .slideshow-container {
   margin-right: 7.5%;
-  max-width: 1000px;
   position: relative;
   margin-top: 10px;
+  margin-bottom: 4%;
 }
 
 .mySlides {
@@ -14,7 +14,7 @@
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 55%;
   width: auto;
   margin-top: -50px;
   padding: 16px;
