@@ -1,17 +1,31 @@
 .eventcard {
     display: none;
-
+    margin: 25px;
 }
 
+
+.eventsblock {
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+
+}
 
 .column{
     display: flex;
     flex-wrap: wrap;
+    height: 800px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 .show {
     flex-wrap: wrap;
     display: flex;
+    flex-grow: 1;
 }
 
 .btn.actief {
@@ -22,3 +36,4 @@
 .btn:hover{
     cursor: pointer;
 }
+
