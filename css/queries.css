@@ -11,6 +11,7 @@
 }
 
 @media only screen and (max-width: 1300px) {
+
     .card_position {
         display: flex;
         flex-direction: column;
@@ -60,10 +61,6 @@
     }
 }
 
-
-
-
-
 @media only screen and (max-width: 1075px) {
     .card_position p {
         font-size: 9px;
@@ -87,11 +84,14 @@
 
 @media only screen and (max-width: 517px) {
 
-    .search_buttons {
-        font-size: 5px;
+    .eventcard:hover{
+        transform: scale(1);
     }
 
 
+    .search_buttons {
+        font-size: 5px;
+    }
 
     .event_card img {
         width: 150px;
@@ -100,12 +100,12 @@
 
 }
 
-.buttons_scroll {
-    display: flex;
-    flex-direction: column;
-}
-
 @media only screen and (max-width: 400px) {
+
+    .event_card {
+        height: 150px;
+        border-radius: 0px;
+    }
 
     .card_position p {
         font-size: 4px;
@@ -144,241 +144,7 @@
     }
 }
 
-.about_cantine {
-    margin-left: 45px;
-    max-width: 400px;
 
-}
-
-.h1_textcantine {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.h1_textcantine #new {
-    background-color: #ffc03a;
-    color: white;
-    padding: 10px;
-    border-radius: 15px;
-    
-
-}
-
-.cantineall {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-
-}
-
-.photocantine img {
-    margin-left: 200px;
-    width: 200px;
-    height: 200px;
-
-}
-
-.info_cantine p {
-    font-family: 'Poppins', sans-serif;
-    color: black;
-    padding: 10px;
-    margin-left: 45px;
-    border-radius: 7px;
-    background-color: #edf1f5;
-    /* width: 60%; */
-    max-width: 400px;
-
-}
-
-.info_cantine a {
-    text-decoration: none;
-    color: #9b59b6;
-    border-radius: 15px;
-    padding: 5px;
-    transition: 200ms;
-
-}
-
-.info_cantine a:hover {
-    text-decoration: underline;
-
-}
-
-.button_cantine {
-    text-align: left;
-    margin-left: 45px;
-
-}
-
-.button_cantine a {
-    font-family: 'Poppins', sans-serif;
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 15px;
-    background-color: white;
-    transition: 200ms ease-in;
-
-}
-
-.button_cantine a:hover {
-    text-decoration: none;
-    color: white;
-    background-color: #9b59b6;
-
-}
-
-#last_header {
-    margin-bottom: 100px;
-
-}
-
-.footer_page {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.footergray {
-    background-color: #d5d9dd;
-    width: 100%;
-    height: 100px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-}
-
-.sponmarg {
-    margin-right: 100px;
-
-}
-
-.sponsors a {
-    filter: opacity(60%);
-    transition: 200ms ease-in;
-
-}
-
-.sponsors a:hover {
-    filter: opacity(100%);
-
-}
-
-#spo1 {
-    width: 50px;
-    margin-top: 10px;
-
-}
-
-#spo2 {
-    width: 50px;
-
-}
-
-#spo3 {
-    width: 70px;
-
-}
-
-#spo4 {
-    width: 90px;
-
-}
-
-.footerwhite {
-    background-color: white;
-    width: 100%;
-    height: 300px;
-
-}
-
-.spons_pos {
-    display: flex;
-    justify-content: space-around;
-
-}
-
-.spons_card h1 {
-    font-family: 'Poppins', sans-serif;
-    color: black;
-    text-transform: uppercase;
-    font-size: 25px;
-
-}
-
-.spons_card p {
-    font-family: 'Poppins', sans-serif;
-    color: black;
-    text-transform: none
-}
-
-.imgspons {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-
-}
-
-.imgspons img {
-    width: 40px;
-    filter: opacity(50%);
-    transition: 200ms ease-in;
-
-}
-
-.imgspons img:hover {
-    cursor: pointer;
-    filter: opacity(100%);
-
-}
-
-.imgspmar {
-    margin-right: 10px;
-
-}
-
-#sponscenter {
-    text-align: center;
-}
-
-#sponsleft {
-    text-align: left;
-
-}
-
-.h1_textcantine #new {
-    background-color: #ffc03a;
-    color: white;
-    padding: 10px;
-    border-radius: 15px;
-    animation: infinite newlogo 1s ease-in-out;
-
-}
-
-/* ANIMATION */
-
-@keyframes newlogo {
-    0% {
-        background-color: #ffc03a;
-        transform: scale(1);
-    }
-
-    50% {
-        background-color: #ffd885;
-        transform: scale(1.02);
-
-    }
-
-    100% {
-        transform: scale(1);
-
-    }
-}
-
-/*  */
 
 
 @media only screen and (min-width: 750px) {
@@ -390,13 +156,6 @@
 }
 
 @media only screen and (max-width: 750px) {
-
-    .eventsblock {
-        transform: scale(100%);
-        margin-top: -190px;
-        margin-left: -290px;
-        margin-bottom: -200px;
-    }
 
     .topnav {
         display: flex;
@@ -509,7 +268,6 @@
         margin-left: 0px;
         height: 250px;
         transition: 0ms;
-
     }
 
     .event_card:hover {
@@ -700,9 +458,133 @@
 
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 980px){
+    .column{
+        transform: scale(90%);
+        margin-top: -6%;
+        margin-left: -5%;
+    }
+}
+
+@media only screen and (max-width: 940px){
+    .column{
+        transform: scale(80%);
+        margin-top: -12%;
+        margin-left: -10%;
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .column{
+        transform: scale(70%);
+        margin-top: -18%;
+        margin-left: -15%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .column{
+        transform: scale(60%);
+        margin-top: -24%;
+        margin-left: -20%;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .column{
+        margin-left: 10%;
+        transform: scale(100%);
+        text-align: center;
+        margin-top: 10.8%;
+    }
+
+    .infopose p{
+        font-size: 12px;
+    }
+
+    .infousertext{
+        width: 100%;
+    }
+
+    .commentblock{
+        padding: 0px;
+        border-radius: 0%;
+        width: 100%;
+        margin: 0px;
+        background-color: white;
+    }
+
+    .titelcr{
+        height: 20px;
+        background-color: white;
+    }
+
+    .messageinput{
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 1912px){
+
+}
+
+
+@media only screen and (max-width: 673px) {
+
+    .headertext h1{
+        font-size: 40px;
+    }
+    
     .h1_textcantine h1 {
         font-size: 20px;
     }
 
+    .eventcard{
+        width: 80%;
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    .column{
+        margin: 0 auto;
+        height:300px;
+    }
+
+    .eventsblock{
+        margin:0px;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+
+    .h1_textcantine h1 {
+        font-size: 20px;
+    }
+
+    .message_text p{
+        margin-left: -50px;
+        font-size: 12px;
+    }
+
+    .eventcard{
+        transform: scale(80%);
+        margin-left: 0px;
+        margin-right: 0px;
+        border-radius: 0px 0px 0px 0px;
+        overflow: hidden;
+    }
+
+    .column{
+        overflow-x: hidden;
+        width: 80%;
+        margin-left: 0px;
+        margin: 0 auto;
+        height:300px;
+    }
+
+    .eventsblock{
+        margin:0px;
+    }
+
+    
 }

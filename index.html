@@ -57,428 +57,439 @@
                     </div>
                 </div>
             </div>
+
+            <script>
+                filterSelection("all")
+                function filterSelection(c) {
+                    var x, i;
+                    x = document.getElementsByClassName("eventcard");
+                    if (c == "all") c = "";
+                    for (i = 0; i < x.length; i++) {
+                        removeClass(x[i], "show");
+                        if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+                    }
+                }
+
+                function addClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        if (arr1.indexOf(arr2[i]) == -1) {
+                            element.className += " " + arr2[i];
+                        }
+                    }
+                }
+
+                function removeClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        while (arr1.indexOf(arr2[i]) > -1) {
+                            arr1.splice(arr1.indexOf(arr2[i]), 1);
+                        }
+                    }
+                    element.className = arr1.join(" ");
+                }
+
+                var btnContainer = document.getElementById("knoppen");
+                var btns = btnContainer.getElementsByClassName("btn");
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].addEventListener("click", function () {
+                        var current = document.getElementsByClassName("actief");
+                        current[0].className = current[0].className.replace(" actief", "");
+                        this.className += " actief";
+                    });
+                }
+            </script>
+
             <div class="eventsblock">
                 <div class="column">
-                    <script>
-                        filterSelection("all")
-                        function filterSelection(c) {
-                            var x, i;
-                            x = document.getElementsByClassName("eventcard");
-                            if (c == "all") c = "";
-                            for (i = 0; i < x.length; i++) {
-                                removeClass(x[i], "show");
-                                if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
-                            }
-                        }
 
-                        function addClass(element, name) {
-                            var i, arr1, arr2;
-                            arr1 = element.className.split(" ");
-                            arr2 = name.split(" ");
-                            for (i = 0; i < arr2.length; i++) {
-                                if (arr1.indexOf(arr2[i]) == -1) {
-                                    element.className += " " + arr2[i];
-                                }
-                            }
-                        }
-
-                        function removeClass(element, name) {
-                            var i, arr1, arr2;
-                            arr1 = element.className.split(" ");
-                            arr2 = name.split(" ");
-                            for (i = 0; i < arr2.length; i++) {
-                                while (arr1.indexOf(arr2[i]) > -1) {
-                                    arr1.splice(arr1.indexOf(arr2[i]), 1);
-                                }
-                            }
-                            element.className = arr1.join(" ");
-                        }
-
-                        var btnContainer = document.getElementById("knoppen");
-                        var btns = btnContainer.getElementsByClassName("btn");
-                        for (var i = 0; i < btns.length; i++) {
-                            btns[i].addEventListener("click", function () {
-                                var current = document.getElementsByClassName("actief");
-                                current[0].className = current[0].className.replace(" actief", "");
-                                this.className += " actief";
-                            });
-                        }
-                    </script>
-
-                    <div class="eventsblock">
-                        <div class="column">
-
-                            <div class="eventcard etendrinken buiten muziek show">
-                                <div class="eventimage" id="event01">
-                                    <div class="previewtext">
-                                        <h1>eetfestijn: vlaamse gerechten</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 09/03/2022
-                                            <br>
-                                            📍 Locatie: RUE DE LA LIMITE 67, 1210 SAINT-JOSSE-TEN-NOODE
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Eten en drinken</p>
-                                            <p class="tag">Buiten</p>
-                                            <p class="tag">Muziek</p>
-                                        </div>
-                                    </div>
+                    <div class="eventcard show etendrinken buiten muziek">
+                        <div class="eventimage" id="event01">
+                            <div class="previewtext">
+                                <h1>Eetfestijn: Spaanse gerechten</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 09/03/2022
+                                    <br>
+                                    📍 Locatie: RUE DE LA LIMITE 67, 1210 SAINT-JOSSE-TEN-NOODE
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Eten en drinken</p>
+                                    <p class="tag">Buiten</p>
+                                    <p class="tag">Muziek</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard theater buiten muziek show">
-                                <div class="eventimage" id="event02">
-                                    <div class="previewtext">
-                                        <h1>Theater Voorstelling: Een vogel op een tak.</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 05/02/2022
-                                            <br>
-                                            📍 Locatie: Rue Botanique 1210 Saint-Josse-ten-Noode
+                    <div class="eventcard show theater buiten muziek">
+                        <div class="eventimage" id="event02">
+                            <div class="previewtext">
+                                <h1>Theater Voorstelling: Een vogel op een tak</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 05/02/2022
+                                    <br>
+                                    📍 Locatie: Rue Botanique 1210 Saint-Josse-ten-Noode
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Theater</p>
-                                            <p class="tag">Buiten</p>
-                                            <p class="tag">Muziek</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Theater</p>
+                                    <p class="tag">Buiten</p>
+                                    <p class="tag">Muziek</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard buiten muziek show">
-                                <div class="eventimage" id="event03">
-                                    <div class="previewtext">
-                                        <h1>Muziek op straat: Fanfare Jos en Ed.</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 15/02/2022
-                                            <br>
-                                            📍 Locatie: RUE TRAVERSIÈRE 1210 SAINT-JOSSE-TEN-NOODE
+                    <div class="eventcard show buiten muziek">
+                        <div class="eventimage" id="event03">
+                            <div class="previewtext">
+                                <h1>Muziek op straat: Fanfare Jos en Ed</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 15/02/2022
+                                    <br>
+                                    📍 Locatie: RUE TRAVERSIÈRE 1210 SAINT-JOSSE-TEN-NOODE
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Buiten</p>
-                                            <p class="tag">Muziek</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Buiten</p>
+                                    <p class="tag">Muziek</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard muziek buiten show">
-                                <div class="eventimage" id="event04">
-                                    <div class="previewtext">
-                                        <h1>Bart De Bouwer - 'Freddej, Gebrukt aa woeterpas!'</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 25/02/2022
-                                            <br>
-                                            📍 Locatie: Pl. Quetelet 7, 1210 Saint-Josse-ten-Noode
+                    <div class="eventcard show muziek">
+                        <div class="eventimage" id="event04">
+                            <div class="previewtext">
+                                <h1>Bart De Bouwer - 'Freddej, Gebrukt aa woeterpas!'</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 25/02/2022
+                                    <br>
+                                    📍 Locatie: Pl. Quetelet 7, 1210 Saint-Josse-ten-Noode
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Muziek</p>
-                                            <p class="tag">Buiten</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Muziek</p>
+                                    <p class="tag">Buiten</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard indoor kinderen show">
-                                <div class="eventimage" id="event05">
-                                    <div class="previewtext">
-                                        <h1>Ouderschap bijeenkomst: Hoe ga ik om met mijn kind?</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 12/03/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Poste 51, 1030 Schaerbeek
+                    <div class="eventcard show volwassenen">
+                        <div class="eventimage" id="event05">
+                            <div class="previewtext">
+                                <h1>Ouderschap bijeenkomst: Hoe ga ik om met mijn kind?</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 12/03/2022
+                                    <br>
+                                    📍 Locatie: Rue de la Poste 51, 1030 Schaerbeek
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Volwassenen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Volwassenen</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard show">
-                                <div class="eventimage" id="event06">
-                                    <div class="previewtext">
-                                        <h1>Opvang: Mama Josée.</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 04/04/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Limite 67, 1210 Sint-Joost-ten-Node
+                    <div class="eventcard show indoor kinderen">
+                        <div class="eventimage" id="event06">
+                            <div class="previewtext">
+                                <h1>Opvang: Mama Josée</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 04/04/2022
+                                    <br>
+                                    📍 Locatie: Rue de la Limite 67, 1210 Sint-Joost-ten-Node
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Indoor</p>
-                                            <p class="tag">Kinderen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Indoor</p>
+                                    <p class="tag">Kinderen</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
+                    <div class="eventcard show kinderen indoor">
+                        <div class="eventimage" id="event07">
+                            <div class="previewtext">
+                                <h1>Sculpturen maken uit klei</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 15/03/2022
+                                    <br>
+                                    📍 Locatie: Aanbeeldstraat 55, 1210 Sint-Joost-ten-Node
 
-
-                            <div class="eventcard volwassenen show">
-                                <div class="eventimage" id="event07">
-                                    <div class="previewtext">
-                                        <h1>Ouderschap bijeenkomst: Hoe ga ik om met mijn kind?</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 12/03/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Poste 51, 1030 Schaerbeek
-
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Volwassenen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Kinderen</p>
+                                    <p class="tag">Indoor</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard indoor kinderen show">
-                                <div class="eventimage" id="event08">
-                                    <div class="previewtext">
-                                        <h1>Opvang: Mama Josée.</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 04/04/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Limite 67, 1210 Sint-Joost-ten-Node
+                    <div class="eventcard show indoor buiten volwassenen etendrinken">
+                        <div class="eventimage" id="event08">
+                            <div class="previewtext">
+                                <h1>Kroegentocht</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 27/03/2022
+                                    <br>
+                                    📍 Locatie: Cafés in de buurt van Sint-Joost-ten-Node
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Indoor</p>
-                                            <p class="tag">Kinderen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Indoor</p>
+                                    <p class="tag">Buiten</p>
+                                    <p class="tag">Volwassenen</p>
+                                    <p class="tag">Eten & drinken</p>
+
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard volwassenen show">
-                                <div class="eventimage" id="event09">
-                                    <div class="previewtext">
-                                        <h1>Ouderschap bijeenkomst: Hoe ga ik om met mijn kind?</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 12/03/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Poste 51, 1030 Schaerbeek
+                    <div class="eventcard show indoor volwassenen">
+                        <div class="eventimage" id="event09">
+                            <div class="previewtext">
+                                <h1>Dart toernooi</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 05/04/2022
+                                    <br>
+                                    📍 Locatie: BertulDotstraat 76, 1210 Sint-Joost-ten-Node
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Volwassenen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Indoor</p>
+                                    <p class="tag">Volwassenen</p>
+
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard show">
-                                <div class="eventimage" id="event10">
-                                    <div class="previewtext">
-                                        <h1>Opvang: Mama Josée.</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 04/04/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Limite 67, 1210 Sint-Joost-ten-Node
+                    <div class="eventcard show indoor kinderen">
+                        <div class="eventimage" id="event10">
+                            <div class="previewtext">
+                                <h1>Dance Battle</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 25/04/2022
+                                    <br>
+                                    📍 Locatie: Bolwerklaan 67, 1210 Sint-Joost-ten-Node
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Indoor</p>
-                                            <p class="tag">Kinderen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Indoor</p>
+                                    <p class="tag">Kinderen</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard show">
-                                <div class="eventimage" id="event11">
-                                    <div class="previewtext">
-                                        <h1>Ouderschap bijeenkomst: Hoe ga ik om met mijn kind?</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 12/03/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Poste 51, 1030 Schaerbeek
+                    <div class="eventcard show buiten kinderen volwassenen">
+                        <div class="eventimage" id="event11">
+                            <div class="previewtext">
+                                <h1>Rommelmarkt</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 02/05/2022
+                                    <br>
+                                    📍 Locatie: Centrum, 1210 Sint-Joost-ten-Node
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Volwassenen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Buiten</p>
+                                    <p class="tag">KInderen</p>
+                                    <p class="tag">Volwassenen</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard show">
-                                <div class="eventimage" id="event12">
-                                    <div class="previewtext">
-                                        <h1>Opvang: Mama Josée.</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 04/04/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Limite 67, 1210 Sint-Joost-ten-Node
+                    <div class="eventcard show indoor kinderen">
+                        <div class="eventimage" id="event12">
+                            <div class="previewtext">
+                                <h1>Kinderfuif</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 12/05/2022
+                                    <br>
+                                    📍 Locatie: Bonneelstraat 122, 1210 Sint-Joost-ten-Node
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Indoor</p>
-                                            <p class="tag">Kinderen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Indoor</p>
+                                    <p class="tag">Kinderen</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard show">
-                                <div class="eventimage" id="event13">
-                                    <div class="previewtext">
-                                        <h1>Ouderschap bijeenkomst: Hoe ga ik om met mijn kind?</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 12/03/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Poste 51, 1030 Schaerbeek
+                    <div class="eventcard show indoor volwassenen kinderen">
+                        <div class="eventimage" id="event13">
+                            <div class="previewtext">
+                                <h1>Schaaktoernooi</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 26/05/2022
+                                    <br>
+                                    📍 Locatie: Braemstraat 34 , 1210 Sint-Joost-ten-Node
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Volwassenen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Indoor</p>
+                                    <p class="tag">Volwassenen</p>
+                                    <p class="tag">Kinderen</p>
                                 </div>
                             </div>
-                            <div class="eventcard show">
-                                <div class="eventimage" id="event14">
-                                    <div class="previewtext">
-                                        <h1>Opvang: Mama Josée.</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 04/04/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Limite 67, 1210 Sint-Joost-ten-Node
+                        </div>
+                    </div>
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Indoor</p>
-                                            <p class="tag">Kinderen</p>
-                                        </div>
-                                    </div>
+                    <div class="eventcard show buiten kinderen">
+                        <div class="eventimage" id="event14">
+                            <div class="previewtext">
+                                <h1>Uitstap naar de kinderboerderij</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 14/05/2022
+                                    <br>
+                                    📍 Locatie: Schipperijkaai 2, 1000 Brussel
+
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Outdoor</p>
+                                    <p class="tag">Kinderen</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
+                    <div class="eventcard show indoor films">
+                        <div class="eventimage" id="event15">
+                            <div class="previewtext">
+                                <h1>Movie Night</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 01/06/2022
+                                    <br>
+                                    📍 Locatie: Chaletstraat 13, 1210 Sint-Joost-ten-Node
 
-                            <div class="eventcard show">
-                                <div class="eventimage" id="event15">
-                                    <div class="previewtext">
-                                        <h1>Ouderschap bijeenkomst: Hoe ga ik om met mijn kind?</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 12/03/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Poste 51, 1030 Schaerbeek
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Indoor</p>
+                                    <p class="tag">Films</p>
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Volwassenen</p>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="eventcard show">
-                                <div class="eventimage" id="event16">
-                                    <div class="previewtext">
-                                        <h1>Opvang: Mama Josée.</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 04/04/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Limite 67, 1210 Sint-Joost-ten-Node
+                        </div>
+                    </div>
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Indoor</p>
-                                            <p class="tag">Kinderen</p>
-                                        </div>
-                                    </div>
+                    <div class="eventcard show buiten kinderen volwassenen">
+                        <div class="eventimage" id="event16">
+                            <div class="previewtext">
+                                <h1>Picknick</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 05/06/2022
+                                    <br>
+                                    📍 Locatie: , Warandepark 1000 Brussel
+
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Outdoor</p>
+                                    <p class="tag">Kinderen</p>
+                                    <p class="tag">Volwassenen</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard show">
-                                <div class="eventimage" id="event17">
-                                    <div class="previewtext">
-                                        <h1>Ouderschap bijeenkomst: Hoe ga ik om met mijn kind?</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 12/03/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Poste 51, 1030 Schaerbeek
+                    <div class="eventcard show volwassenen indoor">
+                        <div class="eventimage" id="event17">
+                            <div class="previewtext">
+                                <h1>Biljarttoernooi</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 10/06/2022
+                                    <br>
+                                    📍 Cornet de Grezstraat, 1210 Sint-Joost-ten-Node
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Volwassenen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Volwassenen</p>
+                                    <p class="tag">Indoor</p>
+
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard show">
-                                <div class="eventimage" id="event18">
-                                    <div class="previewtext">
-                                        <h1>Opvang: Mama Josée.</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 04/04/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Limite 67, 1210 Sint-Joost-ten-Node
+                    <div class="eventcard show indoor volwassenen">
+                        <div class="eventimage" id="event18">
+                            <div class="previewtext">
+                                <h1>Modeshow</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 12/06/2022
+                                    <br>
+                                    📍 Locatie: de Bruynstraat, 1210 Sint-Joost-ten-Node
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Indoor</p>
-                                            <p class="tag">Kinderen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Indoor</p>
+                                    <p class="tag">Volwassenen</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard show">
-                                <div class="eventimage" id="event19">
-                                    <div class="previewtext">
-                                        <h1>Ouderschap bijeenkomst: Hoe ga ik om met mijn kind?</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 12/03/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Poste 51, 1030 Schaerbeek
+                    <div class="eventcard show kinderen indoor">
+                        <div class="eventimage" id="event19">
+                            <div class="previewtext">
+                                <h1>Magicshow</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 16/06/2022
+                                    <br>
+                                    📍 Locatie: Dekeynstraat, 1210 Sint-Joost-ten-Node
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Volwassenen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Kinderen</p>
+                                    <p class="tag">Indoor</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="eventcard show">
-                                <div class="eventimage" id="event20">
-                                    <div class="previewtext">
-                                        <h1>Opvang: Mama Josée.</h1>
-                                        <hr>
-                                        <div class="eventtextpre">
-                                            📅 Datum: 04/04/2022
-                                            <br>
-                                            📍 Locatie: Rue de la Limite 67, 1210 Sint-Joost-ten-Node
+                    <div class="eventcard show buiten ">
+                        <div class="eventimage" id="event20">
+                            <div class="previewtext">
+                                <h1>Wafelverkoop</h1>
+                                <hr>
+                                <div class="eventtextpre">
+                                    📅 Datum: 20/06/2022
+                                    <br>
+                                    📍 Locatie: Druivenstraat 67, 1210 Sint-Joost-ten-Node
 
-                                        </div>
-                                        <div class="tagsarea">
-                                            <p class="tag">Indoor</p>
-                                            <p class="tag">Kinderen</p>
-                                        </div>
-                                    </div>
+                                </div>
+                                <div class="tagsarea">
+                                    <p class="tag">Buiten</p>
                                 </div>
                             </div>
                         </div>
@@ -486,152 +497,154 @@
                 </div>
             </div>
         </div>
-        <div class="header_spacer"></div>
-        <div id="info"></div>
-        <div class="infoarea">
-            <h1>Info</h1>
-            <div class="infopose">
-                <!-- Corner Left = Description, Button to... -->
-                <div class="cornerleft">
-                    <h1 id="watiscj">"Wat is Camping Josée?"</h1>
-                    <p>Camping Josée is een cultuurgenootschap in Sint-Joost-ten-Node.
-                        met een bevolking van ongeveer 27 000 inwoners,
-                        153 nationaliteiten en meer dan 60 talen.
-                        zijn er heel wat verschillende culturen
-                        die komen kijken. Wij willen er voor zorgen dat al deze
-                        verschillende culturen, ieder persoon uniek op hun eigen manier,
-                        met elkaar kan kennis maken met behulp van leuke activiteiten!
-                        Van muziek tot theater tot lekkere eetfestijnen.
-                        Wij van Camping Josée zorgen ervoor dat jij op een gestrucureerde
-                        manier onze site kan bezoeken!</p>
-                    <div class="cantinejosee">
-                        <div class="cantinetitle">
-                            <span id="new"></span>
-                            <div class="buttonnew">
-                                <h1>Nieuw!</h1>
-                            </div>
+    </div>
+    <div class="header_spacer"></div>
+    <div id="info"></div>
+    <div class="infoarea">
+        <h1>Info</h1>
+        <div class="infopose">
+            <!-- Corner Left = Description, Button to... -->
+            <div class="cornerleft">
+                <h1 id="watiscj">"Wat is Camping Josée?"</h1>
+                <p>Camping Josée is een cultuurgenootschap in Sint-Joost-ten-Node.
+                    met een bevolking van ongeveer 27 000 inwoners,
+                    153 nationaliteiten en meer dan 60 talen.
+                    zijn er heel wat verschillende culturen
+                    die komen kijken. Wij willen er voor zorgen dat al deze
+                    verschillende culturen, ieder persoon uniek op hun eigen manier,
+                    met elkaar kan kennis maken met behulp van leuke activiteiten!
+                    Van muziek tot theater tot lekkere eetfestijnen.
+                    Wij van Camping Josée zorgen ervoor dat jij op een gestrucureerde
+                    manier onze site kan bezoeken!</p>
+                <div class="cantinejosee">
+                    <div class="cantinetitle">
+                        <span id="new"></span>
+                        <div class="buttonnew">
+                            <h1>Nieuw!</h1>
                         </div>
-                        <div class="cantineall">
-                            <div class="textcantine">
-                                <h1>Hier is Cantine Josée!</h1>
-                            </div>
-                            <div class="photocantine">
-                                <img src="images/cantinejoseelogo.png" alt="cantine josée">
-                            </div>
+                    </div>
+                    <div class="cantineall">
+                        <div class="textcantine">
+                            <h1>Hier is Cantine Josée!</h1>
                         </div>
-                        <p>Wel gekend als de winter editie van Camping Josée.
-                            Een plek waar iedereen welkom is
-                            en gezellig kan samen komen voor
-                            een warme choco of een fris pintje.</p>
-                        <div class="btnpose">
-                            <div class="btncantine">
-                                <a href="https://gpatsis.wixsite.com/cantinejosee/about-1" target="blank_">Ontdek
-                                    Meer!</a>
-                            </div>
+                        <div class="photocantine">
+                            <img src="images/cantinejoseelogo.png" alt="cantine josée">
                         </div>
-                        <div class="header_spacer"></div>
+                    </div>
+                    <p>Wel gekend als de winter editie van Camping Josée.
+                        Een plek waar iedereen welkom is
+                        en gezellig kan samen komen voor
+                        een warme choco of een fris pintje.</p>
+                    <div class="btnpose">
+                        <div class="btncantine">
+                            <a href="https://gpatsis.wixsite.com/cantinejosee/about-1" target="blank_">Ontdek
+                                Meer!</a>
+                        </div>
+                    </div>
+                    <div class="header_spacer"></div>
+                </div>
+            </div>
+            <!-- Corner Right = Comment Section Users/Visitors -->
+            <div class="cornerright">
+
+                <h1>Reacties van deelnemers:</h1>
+                <div class="titelcr"></div>
+                <div class="commentblock">
+                    <div class="profilemessage">
+                        <img src="images/stockphoto_acc/02082017-riga-latvia-handsome-female-600w-1614384241.webp"
+                            alt="account user">
+                        <div class="message_text">
+                            <div class="infousertext">
+                                <p class="infouser">Kathleen, 35 jaar.</p>
+                            </div>
+                            <p>Camping Josée is super leuk voor jong en oud.
+                                Zeker de kook workshops!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="uploaddate">
+                        <p>Bericht geplaatst op: 02/02/2022</p>
+                    </div>
+
+                    <div class="profilemessage">
+                        <img src="images/stockphoto_acc/young-arab-man-wearing-casual-600w-1897755904.webp"
+                            alt="account user">
+                        <div class="message_text">
+                            <div class="infousertext">
+                                <p class="infouser">Youssef, 22 jaar.</p>
+                            </div>
+                            <p>Camping Josée is handig om mensen in je buurt te
+                                leren kennen dat je nog niet kent.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="uploaddate">
+                        <p>Bericht geplaatst op: 16/02/2022</p>
+                    </div>
+
+                    <div class="profilemessage">
+                        <img src="images/stockphoto_acc/default-avatar-profile-icon-grey-600w-518740741.webp"
+                            alt="account user">
+                        <div class="message_text">
+                            <div class="infousertext">
+                                <p class="infouser">Timo, 12 jaar.</p>
+                            </div>
+                            <p>Leuk om samen met mijn klasgenoten aan evenementen mee
+                                te doen!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="uploaddate">
+                        <p>Bericht geplaatst op: 05/01/2022</p>
                     </div>
                 </div>
-                <!-- Corner Right = Comment Section Users/Visitors -->
-                <div class="cornerright">
-                    <h1>Reacties van deelnemers:</h1>
-                    <div class="commentblock">
-                        <div class="profilemessage">
-                            <img src="images/stockphoto_acc/02082017-riga-latvia-handsome-female-600w-1614384241.webp"
-                                alt="account user">
-                            <div class="message_text">
-                                <div class="infousertext">
-                                    <p class="infouser">Kathleen, 35 jaar.</p>
-                                </div>
-                                <p>Camping Josée is super leuk voor jong en oud.
-                                    Zeker de kook workshops!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="uploaddate">
-                            <p>Bericht geplaatst op: 02/02/2022</p>
-                        </div>
-
-                        <div class="profilemessage">
-                            <img src="images/stockphoto_acc/young-arab-man-wearing-casual-600w-1897755904.webp"
-                                alt="account user">
-                            <div class="message_text">
-                                <div class="infousertext">
-                                    <p class="infouser">Youssef, 22 jaar.</p>
-                                </div>
-                                <p>Camping Josée is handig om mensen in je buurt te
-                                    leren kennen dat je nog niet kent.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="uploaddate">
-                            <p>Bericht geplaatst op: 16/02/2022</p>
-                        </div>
-
-                        <div class="profilemessage">
-                            <img src="images/stockphoto_acc/default-avatar-profile-icon-grey-600w-518740741.webp"
-                                alt="account user">
-                            <div class="message_text">
-                                <div class="infousertext">
-                                    <p class="infouser">Timo, 12 jaar.</p>
-                                </div>
-                                <p>Leuk om samen met mijn klasgenoten aan evenementen mee
-                                    te doen!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="uploaddate">
-                            <p>Bericht geplaatst op: 05/01/2022</p>
-                        </div>
-                    </div>
-                    <div class="messageinput">
-                        <p>schrijf hier je bericht...</p><img src="images/send-message.png" alt="messagesent">
+                <div class="messageinput">
+                    <p>schrijf hier je bericht...</p><img src="images/send-message.png" alt="messagesent">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="titelcr"></div>
+    <div class="footer_page">
+        <div class="footergray">
+            <div class="header_spacer"></div>
+            <div class="sponsors">
+                <a href="https://www.sjtn.brussels/nl" target="_blank"><img class="sponmarg" id="spo1"
+                        src="images/ico/Sint-Joost-Ten-Node_logo_zwart.png" alt="sponsors"></a>
+                <a href="https://www.brussel.be/staycation-bxl-2021?_ga=2.72698323.1706214478.1643331813-280114804.1643331813"
+                    target="_blank"><img class="sponmarg" id="spo2" src="images/ico/StaycationBXL_zwart.png"
+                        alt="sponsors"></a>
+                <a href="https://www.tennoey.be/" target="_blank"><img class="sponmarg" id="spo3"
+                        src="images/ico/Ten-Noey_logo_zwart.png" alt="sponsors"></a>
+                <a href="https://www.n22.brussels/" target="_blank"><img id="spo4" src="images/ico/N22_zwart.png"
+                        alt="sponsors"></a>
+            </div>
+        </div>
+        <div class="footerwhite">
+            <div class="spons_pos">
+                <div id="sponsleft" class="spons_card">
+                    <h1>sponsors</h1>
+                    <p>Saint - Josse</p>
+                    <p>GC Ten Noey</p>
+                    <p>Brusselse gemeenschapscentra</p>
+                    <p>Staycation BXL</p>
+                </div>
+                <div id="sponscenter" class="spons_card">
+                    <h1>contact</h1>
+                    <p>Leuvensesteenweg 54, Sint-Jose-ten-Node</p>
+                    <p>info@cantinejosee.be </p>
+                    <p>0473/27.19.47</p>
+                </div>
+                <div class="spons_card">
+                    <h1>socials</h1>
+                    <div class="imgspons">
+                        <img class="imgspmar" src="images/ico/facebook.png" alt="facebook">
+                        <img src="images/ico/instagram.png" alt="instagram">
                     </div>
                 </div>
             </div>
         </div>
-
-
-        <div class="footer_page">
-            <div class="footergray">
-                <div class="header_spacer"></div>
-                <div class="sponsors">
-                    <a href="https://www.sjtn.brussels/nl" target="_blank"><img class="sponmarg" id="spo1"
-                            src="images/ico/Sint-Joost-Ten-Node_logo_zwart.png" alt="sponsors"></a>
-                    <a href="https://www.brussel.be/staycation-bxl-2021?_ga=2.72698323.1706214478.1643331813-280114804.1643331813"
-                        target="_blank"><img class="sponmarg" id="spo2" src="images/ico/StaycationBXL_zwart.png"
-                            alt="sponsors"></a>
-                    <a href="https://www.tennoey.be/" target="_blank"><img class="sponmarg" id="spo3"
-                            src="images/ico/Ten-Noey_logo_zwart.png" alt="sponsors"></a>
-                    <a href="https://www.n22.brussels/" target="_blank"><img id="spo4" src="images/ico/N22_zwart.png"
-                            alt="sponsors"></a>
-                </div>
-            </div>
-            <div class="footerwhite">
-                <div class="spons_pos">
-                    <div id="sponsleft" class="spons_card">
-                        <h1>sponsors</h1>
-                        <p>Saint - Josse</p>
-                        <p>GC Ten Noey</p>
-                        <p>Brusselse gemeenschapscentra</p>
-                        <p>Staycation BXL</p>
-                    </div>
-                    <div id="sponscenter" class="spons_card">
-                        <h1>contact</h1>
-                        <p>Leuvensesteenweg 54, Sint-Jose-ten-Node</p>
-                        <p>info@cantinejosee.be </p>
-                        <p>0473/27.19.47</p>
-                    </div>
-                    <div class="spons_card">
-                        <h1>socials</h1>
-                        <div class="imgspons">
-                            <img class="imgspmar" src="images/ico/facebook.png" alt="facebook">
-                            <img src="images/ico/instagram.png" alt="instagram">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
 </body>
 
 </html>
